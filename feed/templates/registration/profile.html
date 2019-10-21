@@ -11,16 +11,33 @@
 	{% block styles%} {% bootstrap_css%} {% endblock%}
 </head>
 {% block content%}
-<body style="background-color: #000 ; color: #fafafa; text-align: center;">
+<body style="background-color: #000 ; color: #fafafa; text-align: center; margin-top: 20px; font-size: 30px;">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-7">
 			
 				<img src="{{user_profile.photo.url}}" alt="prof">
 
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-4">
 			<div style="color: #fafafa;">
+					<p>Username:</p>
+				
 					{{ user_data.username }}
+					<br>
+					<br>
+					<br>
+					<p>Your Bio:</p>
+					
+					{{ user_profile.bio}}
+					<br>
+					<br>
+					<br>
+					<p>Your Projects:</p>
+					{% for project in projects%}
+					<a href="{{user_profile.projects}}">Click for a surprise!</a>
+					{% endfor %}
+					<br>
+					<br>
 					<br>
 					<a class="btn btn-primary" href="{% url 'edit_profile'%}">Edit Profile</a>
 					<br>
@@ -28,11 +45,10 @@
 					<a class="btn btn-success" href="{% url 'feed'%}">
 						Home
 					</a>
+					<a class="btn btn-danger" href="{% url 'logout'%}">Logout</a>
 			</div>
 		
-		<div>
-			{{ user_profile.bio}}
-		</div>
+		
 	</div>
 </div>
 	<div id="highlights">
@@ -64,9 +80,6 @@
 				<!-- some post by user -->
 			</div>
 		</div>
-	</div>
-	<div>
-		<a class="btn btn-danger" href="{% url 'logout'%}">Logout</a>
 	</div>
 	{%endblock%}
 </body>
