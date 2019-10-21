@@ -20,93 +20,48 @@
 			x.classList.toggle("fas fa-heart");
 		}
 	</script>
-	<header>
-		<div class="navigation">
-			<div class="instalogo">
-				<a href="">
-					<i class="fab fa-instagram"></i>
-				</a>
-				<a class="vl" href="/"></a>
-				<a href="">Instagram</a>
+	<div>
+		<div id="header">
+			<div id="Eng">
+				<p>
+					English
+				</p>
 			</div>
-
-			<div class="search_bar">
-				<input type="text" placeholder="search">
-				<a class="search" href="">
-					<!-- <i class="fas fa-search"></i> -->
-				</a>
+			<div id="quote">
+				<p>
+					The awards of design, creativity and innovation on the internet
+				</p>
 			</div>
-
-			<div class="contact_icons">
-				<a class="explore" href="">
-					<i class="far fa-compass"></i>
-				</a>
-				<a class="likes" href="">
-					<i class="far fa-heart"></i>
-				</a>
-				<a class="profile" href="{% url 'profile'%}">
-					<i class="far fa-user"></i>
-				</a>
+			<div id="socials">
+				<p>
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+					<br>
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+					<br>
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</p>
 			</div>
 		</div>
-	</header>
-
-	<div class="content_container">
-		{% for image in images%}
-		<div class="card">
-			<div class="card_header">
-				<div class="profile_image">
-						{% load staticfiles %}
-					<img src="{{image.image.url}}" width="595px" height="790px%" alt="">
-					</div>
-				</div>
-					<div class="post_info">
-						<div class="post_name">
-							{{image.image_name}}
-						</div>
-						<div class=" post_location">
-					<p>Kawangware</p>
-				</div>
+		<div id="header2">
+			<div id="menu">
+				<i class="fa fa-bars" aria-hidden="true">Menu</i>
 			</div>
-			<div class="post_options">
-				<a href="">
-					<i class="fas fa-ellipsis-h"></i>
-				</a>
+			<div id="search">
+				<i class="fa fa-search" aria-hidden="true"></i>
 			</div>
-
-
-			<div class="post_image">
-				<!-- img here? -->
+			<div id="logo">
+				awwwards.
 			</div>
-			<div class="engagement">
-				<a id="white_likes" href=""><i class="far fa-heart"></i></a>
-
-
-				<a style="color:red; display: none;" id="red_likes" href=""><i class="fas fa-heart"></i></a>
-
-
-				<a href=""><i class="far fa-comment"></i></a>
-				<a href=""><i style="transform:rotate(-90deg);" class="fas fa-sign-out-alt"></i></a>
-				<a href=""><i class="far fa-bookmark"></i></a>
+			<div id="reg">
+				REGISTER / LOG IN
 			</div>
-			<div id="number_likes" class="likes">
-				<a href="">{{image.likes}}</a>
-			</div>
-			<div class="caption">
-				<a href="">
-					<h2></h2>
-				</a>
-				<span>
-					<p>
-						{{image.caption }}
-					</p>
-				</span>
-			</div>
-			<div class="post_time">
-				{{image.date | timesince}} ago
+			<div id="submit_button">
+				SUBMIT YOUR SITE!
 			</div>
 		</div>
-		{%endfor%}
+		<div>
+			<iframe src="https://lagutalaguta.com/" frameborder="0"></iframe>
+		</div>
 	</div>
 </body>
 

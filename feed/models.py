@@ -29,6 +29,7 @@ class UserProfile(models.Model):
     )
     phone = models.DecimalField(max_digits=10, decimal_places=0, default=0)
     bio = models.TextField()
+    projects = models.TextField(blank=True)
     
     def __str__(self):
         return self.user.username
