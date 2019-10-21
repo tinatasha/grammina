@@ -1,8 +1,8 @@
-# GRAMMINA
+# AWARDSSS
 A django application showcasing the beauty of black women.
 
 ## Description
-A clone of instagram.
+A clone of awwwards.
 
 
 #### Link to deployed site

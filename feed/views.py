@@ -37,6 +37,7 @@ def profile(request):
     current_user = request.user.profile
     user_data = User.objects.get(id=current_user.id)
     user_profile = UserProfile.objects.get(id=current_user.id)
+    
     return render(
         request,
         "registration/profile.html",
